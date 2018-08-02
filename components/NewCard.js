@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
-
 import { createCard } from '../utils/api';
 import { addCard } from '../actions';
-
 import { white, black, mainBackgroundColor, mainTextColor } from '../utils/colors';
-
 import Button from './Button';
 
 class NewCard extends Component {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
-
 import {
   showAnswer,
   hideAnswer,
@@ -10,12 +9,10 @@ import {
   setQuizToComplete,
   resetQuiz
 } from '../actions';
-
 import QuizStatusBar from './QuizStatusBar';
 import QuizCard from './QuizCard';
 import QuizButtons from './QuizButtons';
 import QuizComplete from './QuizComplete';
-
 import { white } from '../utils/colors';
 
 class Quiz extends Component {
