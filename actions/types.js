@@ -1,0 +1,10 @@
+export const ADD_DECKS = 'ADD_DECKS';
+export const ADD_DECK = 'ADD_DECK';
+export const ADD_CARD = 'ADD_CARD';
+export const SET_QUIZ_DECK_TITLE = 'SET_QUIZ_DECK_TITLE';
+export const SHOW_ANSWER = 'SHOW_ANSWER';
+export const HIDE_ANSWER = 'HIDE_ANSWER';
+export const UPDATE_QUIZ_SCORE = 'UPDATE_QUIZ_SCORE';
+export const UPDATE_CURRENT_CARD_INDEX = 'UPDATE_CURRENT_CARD_INDEX';
+export const SET_QUIZ_TO_COMPLETE = 'SET_QUIZ_TO_COMPLETE';
+export const RESET_QUIZ = 'RESET_QUIZ';
