@@ -9,7 +9,7 @@ The app was developed and tested on iOS.
 ## Installation
 
 1. Clone or download this repository
-2. `yarn`
+2. `yarn install`
 3. `yarn start`
 4. Follow instructions from Expo - the app can be run using the iOS emulator, or on an iPhone & the [Expo Application](https://expo.io)
 
