@@ -2,6 +2,10 @@
 
 This is the last project for Udacity's React Native course, in which we create an app using React Native.
 
+## Note
+
+The app was developed and tested on iOS.
+
 ## Installation
 
 1. Clone or download this repository
