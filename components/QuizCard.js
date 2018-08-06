@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
+
 import { white } from '../utils/colors';
+
 import QuizCardBack from './QuizCardBack';
 
 class QuizCard extends Component {

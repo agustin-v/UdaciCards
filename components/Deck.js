@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
-
 import { setQuizDeckTitle } from '../actions';
 import { cardsToString } from '../utils/helpers';
-
 import { mainBackgroundColor } from '../utils/colors';
 
 import Button from './Button';

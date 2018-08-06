@@ -7,9 +7,12 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
+
 import { black, white, mainBackgroundColor, mainTextColor } from '../utils/colors';
+
 import { createDeck, getDecks } from '../utils/api';
 import { addDeck } from '../actions';
+
 import Button from './Button';
 
 class NewDeck extends Component {

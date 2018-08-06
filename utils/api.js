@@ -19,18 +19,24 @@ export function createDeck (title) {
 }
 
 export function createCard (deckTitle, card) {
-  AsyncStorage.getItem(DECKS_STORAGE_KEY, (err, result) => {
+  return AsyncStorage.getItem(DECKS_STORAGE_KEY, (err, result) => {
     const decks = JSON.parse(result);
+    const cards = decks[deckTitle].cards.concat([card])
 
-    decks[deckTitle].cards.push(card)
-
-    const cards = decks[deckTitle].cards;
-
-    return AsyncStorage.mergeItem(DECKS_STORAGE_KEY, JSON.stringify({
-      [deckTitle]: {
-        title: deckTitle,
-        cards: cards
-      }
-    }))
+    return new Promise((resolve, reject) => {
+      AsyncStorage.mergeItem(DECKS_STORAGE_KEY, JSON.stringify({
+        [deckTitle]: {
+          title: deckTitle,
+          cards: cards
+        }
+      }), (err)=> {
+        if(err) {
+          reject(err)
+        }
+        AsyncStorage.getItem(DECKS_STORAGE_KEY, (err, result) => {
+          resolve(JSON.parse(result))
+        })
+      })
+    })
   })
 }

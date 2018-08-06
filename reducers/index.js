@@ -29,8 +29,8 @@ function decks (state = initialDecksData, action) {
       return {
         ...state,
         [action.deckTitle]: {
-          title: action.deckTitle,
-          cards: [...state[action.deckTitle].cards, action.card]
+          ...state[action.deckTitle],
+          cards: state[action.deckTitle].cards.concat([action.card]) 
         }
       };
     default:

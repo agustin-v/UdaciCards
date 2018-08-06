@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
+
 import { createCard } from '../utils/api';
 import { addCard } from '../actions';
+
 import { white, black, mainBackgroundColor, mainTextColor } from '../utils/colors';
+
 import Button from './Button';
 
 class NewCard extends Component {
@@ -21,17 +24,17 @@ class NewCard extends Component {
 
   submitCard = () => {
     const { title } = this.props.navigation.state.params;
-
-    createCard(title, this.state)
     this.props.dispatch(addCard(title, this.state))
-    this.props.navigation.dispatch(NavigationActions.reset(
-      {
-        index: 0,
-        actions: [
-          NavigationActions.navigate({ routeName: 'Home' })
-        ]
-      }));
-    this.props.navigation.goBack()
+    createCard(title, this.state).then( () => {
+      this.props.navigation.dispatch(NavigationActions.reset(
+        {
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'Home' })
+          ]
+        }));
+      this.props.navigation.goBack()
+    })
   }
 
   render() {
@@ -52,7 +55,7 @@ class NewCard extends Component {
           onChangeText={(backText) => this.setState({backText})}
         />
         <Button
-          onPress={this.submitCard}
+          onPress={() => {this.submitCard()}}
           text={'Add Card'}
         />
       </View>

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
+
 import { mainTextColor, headerTextColor } from '../utils/colors';
+
 import Button from './Button';
 
 class QuizButtons extends Component {

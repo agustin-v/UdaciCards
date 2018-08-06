@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+
 import { mainBackgroundColor } from '../utils/colors';
+
 import QuizScore from './QuizScore';
 import QuizRemaining from './QuizRemaining';
 

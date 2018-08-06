@@ -18,7 +18,7 @@ class DeckList extends Component {
 
   render() {
     const deckItemColors = [listItemColorA, listItemColorB, listItemColorC];
-
+    
     return (
       <ScrollView>
         {this.props.decks.map((deck, i) => (
@@ -38,7 +38,6 @@ class DeckList extends Component {
 function mapStateToProps (state) {
   const deckKeys = Object.keys(state.decks);
   const decks = deckKeys.map(key => state.decks[key]);
-
   return {
     decks: decks
   };
